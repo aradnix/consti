@@ -1,11 +1,11 @@
 \mainlanguage[es]
 \setuppagenumbering[page=alternative=doublesided,location={bottom,right}]
-\setupwhitespace[none]
+\setupwhitespace[small]
 \setupindenting[yes,next,small]
 \definestructureconversionset[sectionnumbers][0,R,R,R,n,n,n][n]
 \definestructureresetset[default][1,0,1,1,0][1]
 \setupheads[indentnext=yes, sectionconversionset=sectionnumbers]
-\setuphead[part][style=\bf, number=no, page={yes,header,footer,right},
+\setuphead[part][style=\bf, number=no, page={no,header,footer,right},
 placehead=yes, after={\page[yes,header,footer,right]}]
 \setuphead[chapter][style=\bf, page={yes,header,footer,right},
 sectionsegments=chapter, number=yes, numbercommand=Título~]
@@ -20,11 +20,26 @@ sectionsegments=chapter, number=yes, numbercommand=Título~]
 \setuplayout[grid=yes]
 \starttext
 \showgrid
+
+\startstandardmakeup
+\startalignment[center]
+  \blank[2*big]
+    {\tfd Constitución Política de la\\ República Mexicana}
+  \blank[3*medium]
+    {\tfa Congreso Extraordinario Constituyente}
+  \blank[2*medium]
+    {\tfa 12 de febrero de 1857}
+  \blank[3*medium]
+\stopalignment
+\stopstandardmakeup
+
 \part{Constitución Política de la República Mexicana de 1857}
 
-Febrero 12 de 1857.- Constitucion Política de la República.
+\crlf
 
-Ignacio Comonfort, Presidente sustituto de la República Mexicana, á los habitantes de ella, sabed: Que el congreso extraordinario constituyente ha decretado lo que sigue:
+\subject{Febrero 12 de 1857.- Constitucion Política de la República.}
+
+Ignacio Comonfort, Presidente sustituto de la República Mexicana, á los habitantes de ella, sabed: Que el congreso extraordinario constituyente ha decretado lo que sigue: 
 
 En el nombre de Dios y con la autoridad del pueblo mexicano.
 
@@ -32,7 +47,9 @@ Los representantes de los diferentes Estados, del Distrito y Territorios que com
 
 \subject{Constitución}
 
+\startalignment[center]
 Política de la República Mexicana sobre la indestructible base de su legítima independencia, proclamada el 16 de setiembre de 1810, y consumada el 27 de setiembre de 1821.
+\stopalignment
 
 \chapter{\mbox{}}
 
@@ -329,7 +346,7 @@ pertenezca á los tribunales de la federación.
 \subsubsection{\mbox{}} El presidente no puede separarse del lugar de la residencia de los poderes federales, ni del ejercicio de sus funciones, sin motivo grave calificado por el congreso, y en sus recesos por la diputacion permanente.
 
 \subsubsection{\mbox{}} Las facultades y obligaciones del presidente, son las siguientes:
-\startitemize
+\startitemize[R]
 \item Promulgar y ejecutar las leyes que expida el congreso de la Union, proveyendo en la esfera administrativa á su exacta observancia.
 \item Nombrar y remover libremente á los secretarios del despacho, remover á los agentes diplomáticos y empleados superiores de hacienda, y nombrar y remover libremente á los demás empleados de la Union, cuyo nombramiento ó remocion no estén determinados de otro modo en la Constitucion ó en las leyes.
 \item Nombrar los ministros, agentes diplomáticos y cónsules generales, con aprobacion del congreso, y en sus recesos de la diputacion permanente.
@@ -373,7 +390,7 @@ extranjeras.
 \subsubsection{\mbox{}} La ley establecerá y organizará los tribunales de Circuito y de Distrito.
 
 \subsubsection{\mbox{}} Corresponde á los tribunales de la federacion, conocer:
-\startitemize
+\startitemize[R]
 \item De todas las controversias que se susciten sobre el cumplimiento y aplicacion de las leyes federales.
 \item De las que versen sobre derecho marítimo.
 \item De aquellas en que la federacion fuere parte.
@@ -390,7 +407,7 @@ extranjeras.
 \subsubsection{\mbox{}} En los demás casos comprendidos en el artículo 97, la Suprema Corte de Justicia será tribunal de apelacion, ó bien de última instancia, conforme á la graduacion que haga la ley de las atribuciones de los tribunales de Circuito y de Distrito.
 
 \subsubsection{\mbox{}} Los tribunales de la federacion resolverán toda controversia que se suscite:
-\startitemize
+\startitemize[R]
 \item Por leyes ó actos de cualquiera autoridad que violen las garantías individuales.
 \item Por leyes ó actos de la autoridad federal que vulneren ó restrinjan la soberanía de los Estados.
 \item Por las leyes ó actos de las autoridades de éstos, que invadan la esfera de la autoridad federal.
@@ -421,14 +438,14 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 \subsubsection{\mbox{}} Los Estados pueden arreglar entre sí, por convenios amistosos, sus respectivos límites; pero no se llevarán á efecto esos arreglos sin la aprobacion del congreso de la Unión.
 
 \subsubsection{\mbox{}} Los Estados no pueden en ningun caso:
-\startitemize
+\startitemize[R]
 \item Celebrar alianza, tratado ó coalicion con otro Estado, ni con potencias extranjeras. Exceptúase la coalición, que pueden celebrar los Estados fronterizos, para la guerra ofensiva ó defensiva contra los bárbaros.
 \item Expedir patentes de corso ni de represalias.
 \item Acuñar moneda, emitir papel moneda, ni papel sellado.
 \stopitemize
 
 \subsubsection{\mbox{}} Tampoco pueden, sin consentimiento del congreso de la Union:
-\startitemize
+\startitemize[R]
 \item Establecer derechos de tonelaje ni otro alguno de puerto; ni imponer contribuciones ó derechos sobre importaciones ó exportaciones.
 \item Tener en ningun tiempo tropa permanente, ni buques de guerra.
 \item Hacer la guerra por sí á alguna potencia extranjera. Exceptúanse los casos de invasion ó de peligro tan inminente que no admita demora. En estos casos darán cuenta inmediatamente al presidente de la República.
