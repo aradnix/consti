@@ -1,30 +1,38 @@
+\showgrid
 \mainlanguage[es]
-\setuppagenumbering[page=alternative=doublesided,location={bottom,right}]
+\setuppagenumbering[page=alternative=doublesided, location={bottom, right}]
 \setupwhitespace[small]
-\setupindenting[yes,next,small]
+\setupindenting[yes, next, small]
 \definestructureconversionset[sectionnumbers][0,R,R,R,n,n,n][n]
 \definestructureresetset[default][1,0,1,1,0][1]
 \setupheads[indentnext=yes, sectionconversionset=sectionnumbers]
-\setuphead[part][style=\bf, number=no, page={no,header,footer,right},
-placehead=yes, after={\page[yes,header,footer,right]}]
-\setuphead[chapter][style=\bf, page={yes,header,footer,right},
-sectionsegments=chapter, number=yes, numbercommand=Título~]
+\setuphead[part][style=\bf, number=no, page={no, header, footer, right},
+placehead=yes, after={\page[yes, header, footer, right]}]
+\setuphead[chapter][style=\bfa, page={yes, header, footer, right},
+sectionsegments=chapter, number=yes, after={\blank}, numbercommand=Título~]
 \setuplist[chapter][numbercommand=Título~]
 \setuphead[subject][number=no, numbercommand={}]
-\setuphead[section][style=\bf,sectionsegments=section, numbercommand=Sección~]
+\setuphead[section][style=\bf, sectionsegments=section, numbercommand=Sección~]
 \setuplist[section][numbercommand=Sección~, width=fit, stopper={. }]
-\setuphead[subsection][style=\bf, sectionsegments=subsection, numbercommand=Párrafo~]
+\setuphead[subsection][style=\bf, sectionsegments=subsection, numbercommand={Párrafo~}]
 \setuplist[subsection][numbercommand=Párrafo~, width=fit, stopper={. }]
-\setuphead[subsubsection][style=\bf, number=yes, alternative=text, sectionsegments=subsubsection, numbercommand=Artículo~]
+\setuphead[subsubsection][style=\bf, number=yes, alternative=text, sectionsegments=subsubsection, numbercommand={Artículo~}, before={\blank}]
 \setuplist[subsubsection][separator=., numbercommand=Artículo~]
-\setuplayout[grid=yes]
+\setuplayout[setups=*lessstrict]
+\startsetups[*lessstrict]
+    \setup[reset]
+    \widowpenalty=10000
+    \clubpenalty=10000
+    \brokenpenalty=0
+\stopsetups
+\setupitemize[margin=yes]
+
 \starttext
-\showgrid
 
 \startstandardmakeup
 \startalignment[center]
   \blank[2*big]
-    {\tfd Constitución Política de la\\ República Mexicana}
+    {\tfd\setupinterlinespace Constitución Política de la\\ República Mexicana\par}
   \blank[3*medium]
     {\tfa Congreso Extraordinario Constituyente}
   \blank[2*medium]
@@ -35,11 +43,9 @@ sectionsegments=chapter, number=yes, numbercommand=Título~]
 
 \part{Constitución Política de la República Mexicana de 1857}
 
-\crlf
-
 \subject{Febrero 12 de 1857.- Constitucion Política de la República.}
 
-Ignacio Comonfort, Presidente sustituto de la República Mexicana, á los habitantes de ella, sabed: Que el congreso extraordinario constituyente ha decretado lo que sigue: 
+Ignacio Comonfort, Presidente sustituto de la República Mexicana, á los habitantes de ella, sabed: Que el congreso extraordinario constituyente ha decretado lo que sigue:
 
 En el nombre de Dios y con la autoridad del pueblo mexicano.
 
@@ -47,9 +53,9 @@ Los representantes de los diferentes Estados, del Distrito y Territorios que com
 
 \subject{Constitución}
 
-\startalignment[center]
+\startalign[center]
 Política de la República Mexicana sobre la indestructible base de su legítima independencia, proclamada el 16 de setiembre de 1810, y consumada el 27 de setiembre de 1821.
-\stopalignment
+\stopalign
 
 \chapter{\mbox{}}
 
@@ -214,7 +220,7 @@ la resolucion de conservar su nacionalidad.
 
 \subsubsection{\mbox{}} Se deposita el ejercicio del supremo poder legislativo en una asamblea que se denominará Congreso de la Union.
 
-\subsection{De la eleccion é instalacion del congreso} 
+\subsection{De la eleccion é instalacion del congreso}
 
 \subsubsection{\mbox{}} El Congreso de la Union se compondrá de representantes, elegidos en su totalidad cada dos años por los ciudadanos mexicanos.
 
@@ -242,7 +248,7 @@ la resolucion de conservar su nacionalidad.
 
 \subsubsection{\mbox{}} Toda resolucion del congreso no tendrá otro carácter que el de la ley ó acuerdo económico. Las leyes se comunicarán al Ejecutivo firmadas por el presidente y dos secretarios, y los acuerdos económicos por sólo dos secretarios.
 
-\subsection{De la iniciativa y formacion de las leyes} 
+\subsection{De la iniciativa y formacion de las leyes}
 
 \subsubsection{\mbox{}} El derecho de iniciar leyes compete:
 \startitemize[R]
@@ -273,7 +279,7 @@ la resolucion de conservar su nacionalidad.
 
 \subsubsection{\mbox{}} En el caso de urgencia notoria, calificada por el voto de dos tercios de los diputados presentes, el congreso puede estrechar ó dispensar los trámites establecidos en el artículo 70.
 
-\subsection{De las facultades del congreso} 
+\subsection{De las facultades del congreso}
 
 \subsubsection{\mbox{}} El congreso tiene facultad:
 \startitemize[R]
@@ -310,7 +316,7 @@ pertenezca á los tribunales de la federación.
 \item Para expedir todas las leyes que sean necesarias y propias para hacer efectivas las facultades antecedentes y todas las otras concedidas por esta Constitucion á los poderes de la Union.
 \stopitemize
 
-\subsection{De la diputacion permanente} 
+\subsection{De la diputacion permanente}
 
 \subsubsection{\mbox{}} Durante los recesos del Congreso de la Union, habrá una diputacion permanente, compuesta de un diputado por cada Estado y Territorio, que nombrará el congreso la víspera de la clausura de sus sesiones.
 
@@ -323,9 +329,9 @@ pertenezca á los tribunales de la federación.
 \item Dictaminar sobre todos los asuntos que queden sin resolucion en los expedientes, á fin de que la legislatura que sigue tenga desde luego de que ocuparse.
 \stopitemize
 
-\section{Del poder Ejecutivo} 
+\section{Del poder Ejecutivo}
 
-\subsubsection{\mbox{}} Se deposita el ejercicio del supremo poder Ejecutivo de la Union, en un solo individuo que se denominará ``Presidente de los Estados-Unidos Mexicanos.''
+\subsubsection{\mbox{}} Se deposita el ejercicio del supremo poder Ejecutivo de la Union, en un solo individuo que se denominará «Presidente de los Estados-Unidos Mexicanos».
 
 \subsubsection{\mbox{}} La eleccion de presidente será indirecta en primer grado y en escrutinio secreto, en los términos que disponga la ley electoral.
 
@@ -341,7 +347,7 @@ pertenezca á los tribunales de la federación.
 
 \subsubsection{\mbox{}} Si por cualquier motivo la eleccion de presidente no estuviere hecha y publicada para el 1o de Diciembre en que debe verificarse el reemplazo, ó el electo no estuviere pronto á entrar en el ejercicio de sus funciones, cesará sin embargo el antiguo, y el supremo poder Ejecutivo se depositará interinamente en el presidente de la Suprema Corte de Justicia.
 
-\subsubsection{\mbox{}} El presidente al tomar posesion de su encargo, jurará ante el congreso, y en su receso ante la diputacion permanente, bajo la fórmula siguiente: ``Juro desempeñar leal y patrióticamente el encargo de presidente de los Estados-Unidos Mexicanos, conforme á la Constitucion, y mirando en todo por el bien y prosperidad de la Union.''
+\subsubsection{\mbox{}} El presidente al tomar posesion de su encargo, jurará ante el congreso, y en su receso ante la diputacion permanente, bajo la fórmula siguiente: «Juro desempeñar leal y patrióticamente el encargo de presidente de los Estados-Unidos Mexicanos, conforme á la Constitucion, y mirando en todo por el bien y prosperidad de la Union».
 
 \subsubsection{\mbox{}} El presidente no puede separarse del lugar de la residencia de los poderes federales, ni del ejercicio de sus funciones, sin motivo grave calificado por el congreso, y en sus recesos por la diputacion permanente.
 
@@ -373,7 +379,7 @@ extranjeras.
 
 \subsubsection{\mbox{}} Los secretarios del despacho, luego que estén abiertas las sesiones del primer período, darán cuenta al congreso del estado de sus respectivos ramos.
 
-\section{Del poder judicial} 
+\section{Del poder judicial}
 
 \subsubsection{\mbox{}} Se deposita el ejercicio del poder judicial de la federacion en una Corte Suprema de Justicia y en los tribunales de Distrito y Circuito.
 
@@ -383,7 +389,7 @@ extranjeras.
 
 \subsubsection{\mbox{}} Para ser electo individuo de la Suprema Corte de Justicia, se necesita: estar instruido en la ciencia del derecho, á juicio de los electores, ser mayor de treinta y cinco años y ciudadano mexicano por nacimiento, en ejercicio de sus derechos.
 
-\subsubsection{\mbox{}} Los individuos de la Suprema Corte de Justicia, al entrar á ejercer su encargo, prestarán juramento ante el congreso, y en sus recesos ante la diputacion permanente, en la forma siguiente: ``¿Jurais desempeñar leal y patrióticamente el cargo de magistrado de la Suprema Corte de Justicia, que os ha conferido el pueblo, conforme á la Constitucion, y mirando en todo por el bien y prosperidad de la Union?''
+\subsubsection{\mbox{}} Los individuos de la Suprema Corte de Justicia, al entrar á ejercer su encargo, prestarán juramento ante el congreso, y en sus recesos ante la diputacion permanente, en la forma siguiente: «¿Jurais desempeñar leal y patrióticamente el cargo de magistrado de la Suprema Corte de Justicia, que os ha conferido el pueblo, conforme á la Constitucion, y mirando en todo por el bien y prosperidad de la Union?»
 
 \subsubsection{\mbox{}} El cargo de individuo de la Suprema Corte de Justicia solo es renunciable por causa grave, calificada por el congreso, ante quien se presentará la renuncia. En los recesos de éste la calificacion se hará por la diputacion permanente.
 
@@ -415,7 +421,7 @@ extranjeras.
 
 \subsubsection{\mbox{}} Todos los juicios de que habla el artículo anterior se seguirán, á peticion de la parte agraviada, por medio de procedimientos y formas del órden jurídico, que determinará una ley. La sentencia será siempre tal, que solo se ocupe de individuos particulares, limitándose á protegerlos y ampararlos en el caso especial sobre que verse el proceso, sin hacer ninguna declaracion general respecto de la ley ó acto que la motivare.
 
-\chapter{De la responsabilidad de los funcionarios públicos} 
+\chapter{De la responsabilidad de los funcionarios públicos}
 
 \subsubsection{\mbox{}} Los diputados al congreso de la Union, los individuos de la Suprema Corte de Justicia y los Secretarios del Despacho, son responsables por los delitos comunes que cometan durante el tiempo de su encargo, y por los delitos, faltas ú omisiones en que incurran en el ejercicio de ese mismo encargo. Los gobernadores de los Estados lo son igualmente por la infraccion de la Constitucion y leyes federales. Lo es tambien el presidente de la República; pero durante el tiempo de su encargo solo podrá ser acusado por los delitos de traicion á la patria, violacion expresa de la Constitucion, ataque á la libertad electoral y delitos graves del órden comun.
 
@@ -431,7 +437,7 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 
 \subsubsection{\mbox{}} En demandas del órden civil no hay fuero, ni inmunidad para ningun funcionario público.
 
-\chapter{De los Estados de la federacion} 
+\chapter{De los Estados de la federacion}
 
 \subsubsection{\mbox{}} Los Estados adoptarán para su régimen interior forma de gobierno republicano representativo popular.
 
@@ -459,7 +465,7 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 
 \subsubsection{\mbox{}} Los poderes de la Union tienen el deber de proteger á los Estados contra toda invasion ó violencia exterior. En caso de sublevacion ó trastorno interior, les prestarán igual proteccion, siempre que sean excitados por la legislatura del Estado ó por su ejecutivo, si aquella no estuviere reunida.
 
-\chapter{Prevenciones generales} 
+\chapter{Prevenciones generales}
 
 \subsubsection{\mbox{}} Las facultades que no están expresamente concedidas por esta Constitucion á los funcionarios federales, se entienden reservadas á los Estados.
 
@@ -481,7 +487,7 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 
 \subsubsection{\mbox{}} Esta Constitución, las leyes del congreso de la Union que emanen de ella y todos los tratados hechos ó que se hicieren por el presidente de la República, con aprobacion del congreso; serán la ley suprema de toda la Union. Los jueces de cada Estado se arreglarán á dicha Constitucion, leyes y tratados, á pesar de las disposiciones en contrario que pueda haber en las constituciones ó leyes de los Estados.
 
-\chapter{De la reforma de la Constitucion} 
+\chapter{De la reforma de la Constitucion}
 
 \subsubsection{\mbox{}} La presente Constitucion puede ser adicionada ó reformada. Para que las adiciones ó reformas lleguen á ser parte de la Constitucion, se requiere que el congreso de la Union, por el voto de las dos terceras partes de sus individuos presentes, acuerde las reformas ó adiciones, y que éstas sean aprobadas por la mayoría de las legislaturas de los Estados. El congreso de la Union hará el cómputo de los votos de las legislaturas y la declaracion de haber sido aprobadas las adiciones ó reformas.
 
@@ -491,42 +497,42 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 
 \subsubsubject{Artículo transitorio} Esta Constitucion se publicará desde luego y será jurada con la mayor solemnidad en toda la República; pero con excepcion de las disposiciones relativas á las elecciones de los supremos poderes federales y de los Estados, no comenzará á regir hasta el dia 16 de Setiembre próximo venidero, en que debe instalarse el primer congreso constitucional. Desde entónces el presidente de la República y la Suprema Corte de Justicia, que deben continuar en ejercicio hasta que tomen posesion los individuos electos constitucionalmente, se arreglarán en el desempeño de sus obligaciones y facultades á los preceptos de la Constitucion.
 
-Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mil ochocientos cincuenta y siete, trigésimo sétimo de la Independencia.- 
-Valentin Gomez Farías, diputado por el Estado de Jalisco, Presidente.- 
-Leon Guzman, diputado por el Estado de México, Vicepresidente.- 
-Por el Estado de Aguascalientes, Manuel Buenrostro.- 
-Por el Estado de Chiapas, Francisco Robles, Matías Castellanos.- 
-Por el Estado de Chihuahua, José Eligio Muñoz, Pedro Ignacio Irigoyen.- 
-Por el Estado de Coahuila, Simon de la Garza y Melo.- 
-Por el Estado de Durango, Marcelino Castañeda, Francisco Zarco.- 
-Por el Distrito federal, Francisco de P. Cendejas, José María del Rio, Ponciano Arriaga, J. M. del Castillo Velasco, Manuel Morales Puente.- 
-Por el Estado de Guanajuato, Ignacio Sierra, Antonio Lémus, José de la Luz Rosas, Juan Morales, Antonio Aguado, Francisco P. Montañez, Francisco Guerrero, Blas Balcárcel.- 
-Por el Estado de Guerrero, Francisco Ibarra.- 
-Por el Estado de Jalisco, Espiridion Moreno, Mariano Torres Aranda, Jesus Anaya y Hermosillo, Albino Aranda, Ignacio Luis Vallarta, Benito Gomez Farías, Jesus D. Rojas, Ignacio Ochoa Sanchez, Guillermo Langlois, Joaquin M. Degollado.- 
-Por el Estado de México, Antonio Escudero, José L. Revilla, Julian Estrada, I. de la Peña y Barragan, Estéban Paez, Rafael María Villagran, Francisco Fernandez de Alfaro, Justino Fernandez, Eulogio Barrera, Manuel Romero Rubio, Manuel de la Peña y Ramirez, Manuel Fernandez Soto.- 
-Por el Estado de Michoacán, Santos Degollado, Sabás Iturbide, Francisco G. Anaya, Ramon I. Alcaraz, Francisco Diaz Barriga, Luis Gutierrez Correa, Mariano Ramirez, Mateo Echaiz.- 
-Por el Estado de Nuevo Leon, Manuel P. de Llano.- 
-Por el Estado de Oaxaca, Mariano Zavala, G. Larrazabal, Ignacio Mariscal, Juan N. Cerqueda, Félix Romero, Manuel E. Goytia.- 
-Por el Estado de Puebla, Miguel María Arrioja, Fernando María Ortega, Guillermo Prieto, J. Mariano Viadas, Francisco Banuet, Manuel M. Bargas, Francisco Lazo Estrada, Juan N. Ibarra, Juan N. de la Parra.- 
-Por el Estado de Querétaro, Ignacio Reyes.- 
-Por el Estado de San Luis Potosí, Francisco J. Villalobos, Pablo Tellez.- 
-Por el Estado de Sinaloa, Ignacio Ramirez.- 
-Por el Estado de Sonora, Benito Quintana.- 
-Por el Estado de Tabasco, Gregorio Payró.- 
-Por el Estado de Tamaulipas, Luis García de Arellano.- 
-Por el Estado de Tlaxcala, José Mariano Sanchez.- 
-Por el Estado de Veracruz, José de Empáran, José María Mata, Rafael Gonzalez Paez, Mariano Vega.- 
-Por el Estado de Yucatan, Benito Quijano, Francisco Iniestra, Pedro de Baranda, Pedro Contreras Elizalde.- 
-Por el Territorio de Tehuantepec, Joaquin García Granados.- 
-Por el Estado de Zacatecas, Miguel Auza, Agustin López de Nava, Basilio Perez Gallardo.- 
-Por el Territorio de la Baja California, Mateo Ramirez.- 
-José María Cortés y Esparza, por el Estado de Guanajuato, diputado secretario.- 
-Isidoro Olvera, por el Estado de Mexico, diputado secretario.- 
-Juan de Dios Arias, por el Estado de Puebla, diputado secretario.- 
+Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mil ochocientos cincuenta y siete, trigésimo sétimo de la Independencia.-
+Valentin Gomez Farías, diputado por el Estado de Jalisco, Presidente.-
+Leon Guzman, diputado por el Estado de México, Vicepresidente.-
+Por el Estado de Aguascalientes, Manuel Buenrostro.-
+Por el Estado de Chiapas, Francisco Robles, Matías Castellanos.-
+Por el Estado de Chihuahua, José Eligio Muñoz, Pedro Ignacio Irigoyen.-
+Por el Estado de Coahuila, Simon de la Garza y Melo.-
+Por el Estado de Durango, Marcelino Castañeda, Francisco Zarco.-
+Por el Distrito federal, Francisco de P. Cendejas, José María del Rio, Ponciano Arriaga, J. M. del Castillo Velasco, Manuel Morales Puente.-
+Por el Estado de Guanajuato, Ignacio Sierra, Antonio Lémus, José de la Luz Rosas, Juan Morales, Antonio Aguado, Francisco P. Montañez, Francisco Guerrero, Blas Balcárcel.-
+Por el Estado de Guerrero, Francisco Ibarra.-
+Por el Estado de Jalisco, Espiridion Moreno, Mariano Torres Aranda, Jesus Anaya y Hermosillo, Albino Aranda, Ignacio Luis Vallarta, Benito Gomez Farías, Jesus D. Rojas, Ignacio Ochoa Sanchez, Guillermo Langlois, Joaquin M. Degollado.-
+Por el Estado de México, Antonio Escudero, José L. Revilla, Julian Estrada, I. de la Peña y Barragan, Estéban Paez, Rafael María Villagran, Francisco Fernandez de Alfaro, Justino Fernandez, Eulogio Barrera, Manuel Romero Rubio, Manuel de la Peña y Ramirez, Manuel Fernandez Soto.-
+Por el Estado de Michoacán, Santos Degollado, Sabás Iturbide, Francisco G. Anaya, Ramon I. Alcaraz, Francisco Diaz Barriga, Luis Gutierrez Correa, Mariano Ramirez, Mateo Echaiz.-
+Por el Estado de Nuevo Leon, Manuel P. de Llano.-
+Por el Estado de Oaxaca, Mariano Zavala, G. Larrazabal, Ignacio Mariscal, Juan N. Cerqueda, Félix Romero, Manuel E. Goytia.-
+Por el Estado de Puebla, Miguel María Arrioja, Fernando María Ortega, Guillermo Prieto, J. Mariano Viadas, Francisco Banuet, Manuel M. Bargas, Francisco Lazo Estrada, Juan N. Ibarra, Juan N. de la Parra.-
+Por el Estado de Querétaro, Ignacio Reyes.-
+Por el Estado de San Luis Potosí, Francisco J. Villalobos, Pablo Tellez.-
+Por el Estado de Sinaloa, Ignacio Ramirez.-
+Por el Estado de Sonora, Benito Quintana.-
+Por el Estado de Tabasco, Gregorio Payró.-
+Por el Estado de Tamaulipas, Luis García de Arellano.-
+Por el Estado de Tlaxcala, José Mariano Sanchez.-
+Por el Estado de Veracruz, José de Empáran, José María Mata, Rafael Gonzalez Paez, Mariano Vega.-
+Por el Estado de Yucatan, Benito Quijano, Francisco Iniestra, Pedro de Baranda, Pedro Contreras Elizalde.-
+Por el Territorio de Tehuantepec, Joaquin García Granados.-
+Por el Estado de Zacatecas, Miguel Auza, Agustin López de Nava, Basilio Perez Gallardo.-
+Por el Territorio de la Baja California, Mateo Ramirez.-
+José María Cortés y Esparza, por el Estado de Guanajuato, diputado secretario.-
+Isidoro Olvera, por el Estado de Mexico, diputado secretario.-
+Juan de Dios Arias, por el Estado de Puebla, diputado secretario.-
 J. A. Gamboa, por el Estado de Oaxaca, diputado secretario.
 
-Por tanto, mando se imprima, publique, circule y se le dé el debido cumplimiento, en los términos que ella prescribe. Palacio del gobierno nacional en México, Febrero doce de mil ochocientos cincuenta y siete.- 
-Ignacio Comonfort.- 
+Por tanto, mando se imprima, publique, circule y se le dé el debido cumplimiento, en los términos que ella prescribe. Palacio del gobierno nacional en México, Febrero doce de mil ochocientos cincuenta y siete.-
+Ignacio Comonfort.-
 Al ciudadano Ignacio de la Llave, secretario de Estado y del despacho de Gobernacion.
 
 Y lo comunico á vd. para su publicacion y cumplimiento.
