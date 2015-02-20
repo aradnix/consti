@@ -1,23 +1,25 @@
-\showgrid
+%~\showframe \showgrid
 \mainlanguage[es]
-\setuppagenumbering[page=alternative=doublesided, location={bottom, right}]
+\setuppagenumbering[alternative=doublesided, location={bottom, right}]
 \setupwhitespace[small]
 \setupindenting[yes, next, small]
 \definestructureconversionset[sectionnumbers][0,R,R,R,n,n,n][n]
 \definestructureresetset[default][1,0,1,1,0][1]
-\setupheads[indentnext=yes, sectionconversionset=sectionnumbers]
-\setuphead[part][style=\bf, number=no, page={no, header, footer, right},
-placehead=yes, after={\page[yes, header, footer, right]}]
-\setuphead[chapter][style=\bfa, page={yes, header, footer, right},
-sectionsegments=chapter, number=yes, after={\blank}, numbercommand=Título~]
-\setuplist[chapter][numbercommand=Título~]
-\setuphead[subject][number=no, numbercommand={}]
-\setuphead[section][style=\bf, sectionsegments=section, numbercommand=Sección~]
-\setuplist[section][numbercommand=Sección~, width=fit, stopper={. }]
-\setuphead[subsection][style=\bf, sectionsegments=subsection, numbercommand={Párrafo~}]
-\setuplist[subsection][numbercommand=Párrafo~, width=fit, stopper={. }]
-\setuphead[subsubsection][style=\bf, number=yes, alternative=text, sectionsegments=subsubsection, numbercommand={Artículo~}, before={\blank}]
-\setuplist[subsubsection][separator=., numbercommand=Artículo~]
+\setuplabeltext[chapter=Título~, section=Sección~, subsection=Párrafo~, subsubsection=Artículo~]
+\setupheads[indentnext=yes, sectionconversionset=sectionnumbers, align=nothyphenated]
+\setuplists[label=yes]
+\setuphead[part][style=\bfd, number=no, placehead=yes, align=center, before={\mbox{}\vfill},after={\vfill\mbox{}}, header=empty, footer=empty]
+\setuphead[chapter][style=\bfa, page={yes, blank},
+sectionsegments=chapter, number=yes, after={\blank}]
+\setuplist[chapter][width=fit, stopper={. }]
+\setuphead[section][style=\bf, sectionsegments=section]
+\setuplist[section][width=fit, stopper={. }]
+\setuphead[subsection][style=\bf, sectionsegments=subsection,]
+\setuplist[subsection][width=fit, stopper={. }]
+\setuphead[subsubsection][style=\bf, number=yes, alternative=text, sectionsegments=subsubsection, before={\blank}]
+\setuplist[subsubsection][alternative=d, pagenumber=no]
+\setupinteraction[state=start, color=, style=, focus=standard]
+\enabledirectives[references.border]
 \setuplayout[setups=*lessstrict]
 \startsetups[*lessstrict]
     \setup[reset]
@@ -42,6 +44,8 @@ sectionsegments=chapter, number=yes, after={\blank}, numbercommand=Título~]
 \stopstandardmakeup
 
 \part{Constitución Política de la República Mexicana de 1857}
+
+\page[yes,blank,right]
 
 \subject{Febrero 12 de 1857.- Constitucion Política de la República.}
 
