@@ -235,11 +235,11 @@ system          > files > stop used files
 
 system          > options > start commandline options
 
-used option     > currentrun="2"
+used option     > currentrun="1"
 used option     > engine="luajittex"
 used option     > fulljobname="./Consti.tex"
 used option     > input="./Consti.tex"
-used option     > kindofrun="2"
+used option     > kindofrun="1"
 used option     > maxnofruns="8"
 used option     > no-parse-first-line="true"
 used option     > redirected="true"
@@ -256,15 +256,15 @@ system          > options > stop commandline files
 mkiv lua stats  > used config file: selfautoparent:/texmfcnf.lua;selfautoparent:/texmf-dist/web2c/texmfcnf.lua
 mkiv lua stats  > used cache path: readable: '/usr/local/texlive/2014/texmf-var/luatex-cache/context/a86c089b384a3076dc514ba966a1fac9' | readable+writable: '/home/aradnix/.texlive2014/texmf-var/luatex-cache/context/a86c089b384a3076dc514ba966a1fac9'
 mkiv lua stats  > resource resolver: loadtime 0.365 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 13 found files, scanned paths: <none>
-mkiv lua stats  > stored bytecode data: 350 modules (0.545 sec), 69 tables (0.003 sec), 419 chunks (0.548 sec)
+mkiv lua stats  > stored bytecode data: 350 modules (0.535 sec), 69 tables (0.003 sec), 419 chunks (0.538 sec)
 mkiv lua stats  > running in nuts mode: yes
 mkiv lua stats  > cleaned up reserved nodes: 44 nodes, 443 lists of 442
 mkiv lua stats  > node memory usage: 3 glue, 3 penalty, 16 attribute, 310 glue_spec, 4 attribute_list, 2 temp
 mkiv lua stats  > node list callback tasks: 6 unique task lists, 5 instances (re)created, 4654 calls
-mkiv lua stats  > h-node processing time: 0.161 seconds including kernel
+mkiv lua stats  > h-node processing time: 0.159 seconds including kernel
 mkiv lua stats  > attribute processing time: 0.030 seconds front- and backend
 mkiv lua stats  > used backend: pdf (backend for directly generating pdf output)
-mkiv lua stats  > v-node processing time: 0.029 seconds 
+mkiv lua stats  > v-node processing time: 0.044 seconds 
 mkiv lua stats  > loaded patterns: en::2 es::52, load time: 0.000
 mkiv lua stats  > jobdata time: 0.022 seconds saving, 0.003 seconds loading
 mkiv lua stats  > callbacks: 8787 direct, 760 indirect, 9547 total
@@ -272,11 +272,11 @@ mkiv lua stats  > randomizer: resumed with value 0.793942786268
 mkiv lua stats  > interactive elements: 149 references, 154 destinations
 mkiv lua stats  > result saved in file: Consti.pdf, compresslevel 3, objectcompresslevel 3
 mkiv lua stats  > loaded fonts: 5 files: latinmodern-math.otf, lmroman10-bold.otf, lmroman10-regular.otf, lmroman12-bold.otf, lmroman12-regular.otf
-mkiv lua stats  > fonts load time: 0.267 seconds for 9 fonts, 3 shared in backend, 1 common vectors, 2 common hashes
+mkiv lua stats  > fonts load time: 0.306 seconds for 9 fonts, 3 shared in backend, 1 common vectors, 2 common hashes
 mkiv lua stats  > pdf annotations: 149 links (149 unique), 0 special
 mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: bin
 mkiv lua stats  > luatex banner: this is luajittex, version beta-0.79.1 (tex live 2014) (rev 4971)
-mkiv lua stats  > control sequences: 38808 of 65536 + 100000
+mkiv lua stats  > control sequences: 38809 of 65536 + 100000
 mkiv lua stats  > lua properties: engine: luajit, used memory: 43 MB (ctx: 0 MB), hash type: lua51, hash chars: min(64,40), symbol mask: utf (τεχ)
-mkiv lua stats  > runtime: 2.068 seconds, 38 processed pages, 38 shipped pages, 18.375 pages/second
+mkiv lua stats  > runtime: 2.195 seconds, 38 processed pages, 38 shipped pages, 17.312 pages/second
 
