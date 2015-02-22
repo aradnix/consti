@@ -28,7 +28,7 @@ sectionsegments=chapter, number=yes, after={\blank}]
     \brokenpenalty=0
 \stopsetups
 \setupitemize[each][broad][margin=3em, itemalign=flushright]
-
+\setupxtable[split=yes, frame=off]
 \starttext
 
 \startstandardmakeup
@@ -506,67 +506,166 @@ El jurado de acusacion tendrá por objeto declarar á mayoría absoluta de votos
 
 Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mil ochocientos cincuenta y siete, trigésimo sétimo de la Independencia.-
 
-\starttable[|l|l|]
-\NC Valentin Gomez Farías, \NC diputado por el Estado de Jalisco, Presidente.- \AR
-\NC Leon Guzman, \NC diputado por el Estado de México, Vicepresidente.- \AR
-\HL
-\NC Por el Estado de Aguascalientes, \NC Manuel Buenrostro.- \AR
-\NC Por el Estado de Chiapas, \NC Francisco Robles, Matías Castellanos.- \AR
-\NC Por el Estado de Chihuahua, \NC José Eligio Muñoz, Pedro Ignacio Irigoyen.- \AR
-\NC Por el Estado de Coahuila, \NC Simon de la Garza y Melo.- \AR
-\NC Por el Estado de Durango, \NC Marcelino Castañeda, Francisco Zarco.- \AR
-\NC Por el Distrito federal, \NC Francisco de P. Cendejas, José María del Rio, \NR
-\NC                          \NC Ponciano Arriaga, J. M. del Castillo Velasco, \NR 
-\NC                          \NC Manuel Morales Puente.- \AR
-\NC Por el Estado de Guanajuato, \NC Ignacio Sierra, Antonio Lémus, José de la Luz Rosas, \NR
-\NC                          \NC Juan Morales, Antonio Aguado, Francisco P. Montañez, \NR
-\NC                          \NC Francisco Guerrero, Blas Balcárcel.- \AR
-\NC Por el Estado de Guerrero, \NC Francisco Ibarra.- \AR
-\NC Por el Estado de Jalisco, \NC Espiridion Moreno, Mariano Torres Aranda, \NR 
-\NC                           \NC Jesus Anaya y Hermosillo, Albino Aranda, \NR 
-\NC                           \NC Ignacio Luis Vallarta, Benito Gomez Farías, \NR 
-\NC                           \NC Jesus D. Rojas, Ignacio Ochoa Sanchez, \NR 
-\NC                           \NC Guillermo Langlois, Joaquin M. Degollado.- \AR
-\NC Por el Estado de México, \NC Antonio Escudero, José L. Revilla, Julian Estrada, \NR 
-\NC                          \NC I. de la Peña y Barragan, Estéban Paez, \NR 
-\NC                          \NC Rafael María Villagran, Francisco Fernandez de Alfaro, \NR
-\NC                          \NC Justino Fernandez, Eulogio Barrera, \NR 
-\NC                          \NC Manuel Romero Rubio, Manuel de la Peña y Ramirez, \NR 
-\NC                          \NC Manuel Fernandez Soto.- \AR
-\NC Por el Estado de Michoacán, \NC Santos Degollado, Sabás Iturbide, Francisco G. Anaya, \NR 
-\NC                             \NC Ramon I. Alcaraz, Francisco Diaz Barriga, \NR
-\NC                             \NC Luis Gutierrez Correa, Mariano Ramirez, \NR
-\NC                             \NC Mateo Echaiz.- \AR
-\NC Por el Estado de Nuevo Leon, \NC Manuel P. de Llano.- \AR
-\NC Por el Estado de Oaxaca, \NC Mariano Zavala, G. Larrazabal, Ignacio Mariscal, \NR 
-\NC                          \NC Juan N. Cerqueda, Félix Romero, Manuel E. Goytia.- \AR
-\NC Por el Estado de Puebla, \NC Miguel María Arrioja, Fernando María Ortega, \NR 
-\NC                          \NC Guillermo Prieto, J. Mariano Viadas, Francisco Banuet, \NR 
-\NC                          \NC  Manuel M. Bargas, Francisco Lazo Estrada, \NR
-\NC                          \NC Juan N. Ibarra, Juan N. de la Parra.- \AR
-\NC Por el Estado de Querétaro, \NC Ignacio Reyes.- \AR
-\NC Por el Estado de San Luis Potosí, \NC Francisco J. Villalobos, Pablo Tellez.- \AR
-\NC Por el Estado de Sinaloa, \NC Ignacio Ramirez.- \AR
-\NC Por el Estado de Sonora, \NC Benito Quintana.- \AR
-\NC Por el Estado de Tabasco, \NC Gregorio Payró.- \AR
-\NC Por el Estado de Tamaulipas, \NC Luis García de Arellano.- \AR
-\NC Por el Estado de Tlaxcala, \NC José Mariano Sanchez.- \AR
-\NC Por el Estado de Veracruz, \NC José de Empáran, José María Mata, \NR
-\NC                            \NC Rafael Gonzalez Paez, Mariano Vega.- \AR
-\NC Por el Estado de Yucatan, \NC Benito Quijano, Francisco Iniestra, Pedro de Baranda, \NR 
-\NC                           \NC Pedro Contreras Elizalde.- \AR
-\NC Por el Territorio de Tehuantepec, \NC Joaquin García Granados.- \AR
-\NC Por el Estado de Zacatecas, \NC Miguel Auza, Agustin López de Nava, \NR
-\NC                             \NC Basilio Perez Gallardo.- \AR
-\NC Por el Territorio de la Baja California, \NC Mateo Ramirez.- \LR
-\stoptable
+\blank\startxtable
+\startxrow
+    \startxcell Valentin Gomez Farías, \stopxcell
+    \startxcell diputado por el Estado de Jalisco, Presidente.- \stopxcell
+\stopxrow
+\startxrow[bottomframe=on]
+    \startxcell Leon Guzman, \stopxcell
+    \startxcell diputado por el Estado de México, Vicepresidente.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Aguascalientes, \stopxcell
+    \startxcell Manuel Buenrostro.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Chiapas, \stopxcell
+    \startxcell Francisco Robles, Matías Castellanos.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Chihuahua, \stopxcell
+    \startxcell José Eligio Muñoz, Pedro Ignacio Irigoyen.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Coahuila, \stopxcell
+    \startxcell Simon de la Garza y Melo.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Durango, \stopxcell
+    \startxcell Marcelino Castañeda, Francisco Zarco.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Distrito federal, \stopxcell
+    \startxcell Francisco de P. Cendejas, José María del Rio,
+    Ponciano Arriaga, J. M. del Castillo Velasco,
+    Manuel Morales Puente.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Guanajuato, \stopxcell
+    \startxcell Ignacio Sierra, Antonio Lémus, José de la Luz Rosas, \\
+    Juan Morales, Antonio Aguado, Francisco P. Montañez, \\
+    Francisco Guerrero, Blas Balcárcel.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Guerrero, \stopxcell
+    \startxcell Francisco Ibarra.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Jalisco, \stopxcell
+    \startxcell Espiridion Moreno, Mariano Torres Aranda, \\
+    Jesus Anaya y Hermosillo, Albino Aranda, \\
+    Ignacio Luis Vallarta, Benito Gomez Farías, \\
+    Jesus D. Rojas, Ignacio Ochoa Sanchez, \\
+    Guillermo Langlois, Joaquin M. Degollado.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de México, \stopxcell
+    \startxcell Antonio Escudero, José L. Revilla, Julian Estrada, \\
+    I. de la Peña y Barragan, Estéban Paez, \\
+    Rafael María Villagran, Francisco Fernandez de Alfaro, \\
+    Justino Fernandez, Eulogio Barrera, \\
+    Manuel Romero Rubio, Manuel de la Peña y Ramirez, \\
+    Manuel Fernandez Soto.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Michoacán, \stopxcell
+    \startxcell Santos Degollado, Sabás Iturbide, Francisco G. Anaya, \\
+    Ramon I. Alcaraz, Francisco Diaz Barriga,\\
+    Luis Gutierrez Correa, Mariano Ramirez, \\
+    Mateo Echaiz.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Nuevo Leon, \stopxcell
+    \startxcell Manuel P. de Llano.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Oaxaca, \stopxcell
+    \startxcell Mariano Zavala, G. Larrazabal, Ignacio Mariscal, \\
+    Juan N. Cerqueda, Félix Romero, Manuel E. Goytia.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Puebla, \stopxcell
+    \startxcell Miguel María Arrioja, Fernando María Ortega, \\
+    Guillermo Prieto, J. Mariano Viadas, Francisco Banuet, \\
+    Manuel M. Bargas, Francisco Lazo Estrada, \\
+    Juan N. Ibarra, Juan N. de la Parra.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Querétaro, \stopxcell
+    \startxcell Ignacio Reyes.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de San Luis Potosí, \stopxcell
+    \startxcell Francisco J. Villalobos, Pablo Tellez.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Sinaloa, \stopxcell
+    \startxcell Ignacio Ramirez.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Sonora, \stopxcell
+    \startxcell Benito Quintana.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Tabasco, \stopxcell
+    \startxcell Gregorio Payró.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Tamaulipas, \stopxcell
+    \startxcell Luis García de Arellano.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Tlaxcala, \stopxcell
+    \startxcell José Mariano Sanchez.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Veracruz, \stopxcell
+    \startxcell José de Empáran, José María Mata,\\
+    Rafael Gonzalez Paez, Mariano Vega.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Yucatan, \stopxcell
+    \startxcell Benito Quijano, Francisco Iniestra, Pedro de Baranda,\\
+    Pedro Contreras Elizalde.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Territorio de Tehuantepec, \stopxcell
+    \startxcell Joaquin García Granados.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Estado de Zacatecas, \stopxcell
+    \startxcell Miguel Auza, Agustin López de Nava,\\
+    Basilio Perez Gallardo.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Por el Territorio de la Baja California, \stopxcell
+    \startxcell Mateo Ramirez.-\stopxcell
+\stopxrow
+\stopxtable\blank
 
-\starttable[l|l|l|]
-\NC José María Cortés y Esparza, \NC por el Estado de Guanajuato, \NC diputado secretario.- \AR
-\NC Isidoro Olvera, \NC por el Estado de Mexico, \NC diputado secretario.- \AR
-\NC Juan de Dios Arias, \NC por el Estado de Puebla, \NC diputado secretario.- \AR
-\NC J. A. Gamboa, \NC por el Estado de Oaxaca, \NC diputado secretario.\LR
-\stoptable
+\blank\startxtable
+\startxrow
+    \startxcell José María Cortés y Esparza, \stopxcell
+    \startxcell por el Estado de Guanajuato, \stopxcell
+    \startxcell diputado secretario.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Isidoro Olvera, \stopxcell
+    \startxcell por el Estado de Mexico, \stopxcell
+    \startxcell diputado secretario.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell Juan de Dios Arias, \stopxcell
+    \startxcell por el Estado de Puebla, \stopxcell
+    \startxcell diputado secretario.- \stopxcell
+\stopxrow
+\startxrow
+    \startxcell J. A. Gamboa, \stopxcell
+    \startxcell por el Estado de Oaxaca, \stopxcell
+    \startxcell diputado secretario.\stopxcell
+\stopxrow
+\stopxtable\blank
 
 Por tanto, mando se imprima, publique, circule y se le dé el debido cumplimiento, en los términos que ella prescribe. Palacio del gobierno nacional en México, Febrero doce de mil ochocientos cincuenta y siete.-
 Ignacio Comonfort.-
