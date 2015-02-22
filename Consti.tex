@@ -1,5 +1,6 @@
 %~\showframe \showgrid
 \mainlanguage[es]
+\setuppapersize[letter]%legal es otra opción
 \setuppagenumbering[alternative=doublesided, location={bottom, right}]
 \setupwhitespace[small]
 \setupindenting[yes, next, small]
@@ -9,8 +10,8 @@
 \setupheads[indentnext=yes, sectionconversionset=sectionnumbers, align=nothyphenated]
 \setuplists[label=yes]
 \setuphead[part][style=\bfd, number=no, placehead=yes, align=center, before={\mbox{}\vfill},after={\vfill\mbox{}}, header=empty, footer=empty]
-\setuphead[chapter][style=\bfa, page={yes, blank},
-sectionsegments=chapter, number=yes, after={\blank}]
+\setuphead[chapter][style=\bfa, page=no,
+sectionsegments=chapter, number=yes, before={\blank[2*big]}, after={\blank}]
 \setuplist[chapter][width=fit, stopper={. }]
 \setuphead[section][style=\bf, sectionsegments=section]
 \setuplist[section][width=fit, stopper={. }]
@@ -521,12 +522,12 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Chiapas, \stopxcell
-    \startxcell Francisco Robles, \\ 
+    \startxcell Francisco Robles, \\
                 Matías Castellanos.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Chihuahua, \stopxcell
-    \startxcell José Eligio Muñoz, \\ 
+    \startxcell José Eligio Muñoz, \\
                 Pedro Ignacio Irigoyen.- \stopxcell
 \stopxrow
 \startxrow
@@ -535,26 +536,26 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Durango, \stopxcell
-    \startxcell Marcelino Castañeda, \\ 
+    \startxcell Marcelino Castañeda, \\
                 Francisco Zarco.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Distrito federal, \stopxcell
-    \startxcell Francisco de P. Cendejas, \\ 
+    \startxcell Francisco de P. Cendejas, \\
                 José María del Rio, \\
-                Ponciano Arriaga, \\ 
+                Ponciano Arriaga, \\
                 J. M. del Castillo Velasco, \\
                 Manuel Morales Puente.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Guanajuato, \stopxcell
-    \startxcell Ignacio Sierra, \\ 
-                Antonio Lémus, \\ 
+    \startxcell Ignacio Sierra, \\
+                Antonio Lémus, \\
                 José de la Luz Rosas, \\
-                Juan Morales, \\ 
-                Antonio Aguado, \\ 
+                Juan Morales, \\
+                Antonio Aguado, \\
                 Francisco P. Montañez, \\
-                Francisco Guerrero, \\ 
+                Francisco Guerrero, \\
                 Blas Balcárcel.- \stopxcell
 \stopxrow
 \startxrow
@@ -563,40 +564,40 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Jalisco, \stopxcell
-    \startxcell Espiridion Moreno, \\ 
-                Mariano Torres Aranda, \\                 
-                Jesus Anaya y Hermosillo, \\ 
-                Albino Aranda, \\ 
-                Ignacio Luis Vallarta, \\ 
-                Benito Gomez Farías, \\ 
-                Jesus D. Rojas, \\ 
-                Ignacio Ochoa Sanchez, \\ 
-                Guillermo Langlois, \\ 
+    \startxcell Espiridion Moreno, \\
+                Mariano Torres Aranda, \\
+                Jesus Anaya y Hermosillo, \\
+                Albino Aranda, \\
+                Ignacio Luis Vallarta, \\
+                Benito Gomez Farías, \\
+                Jesus D. Rojas, \\
+                Ignacio Ochoa Sanchez, \\
+                Guillermo Langlois, \\
                 Joaquin M. Degollado.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de México, \stopxcell
-    \startxcell Antonio Escudero, \\ 
-                José L. Revilla, \\ 
-                Julian Estrada, \\ 
-                I. de la Peña y Barragan, \\ 
-                Estéban Paez, \\ 
-                Rafael María Villagran, \\ 
-                Francisco Fernandez de Alfaro, \\ 
-                Justino Fernandez, \\ 
-                Eulogio Barrera, \\ 
-                Manuel Romero Rubio, \\ 
-                Manuel de la Peña y Ramirez, \\ 
+    \startxcell Antonio Escudero, \\
+                José L. Revilla, \\
+                Julian Estrada, \\
+                I. de la Peña y Barragan, \\
+                Estéban Paez, \\
+                Rafael María Villagran, \\
+                Francisco Fernandez de Alfaro, \\
+                Justino Fernandez, \\
+                Eulogio Barrera, \\
+                Manuel Romero Rubio, \\
+                Manuel de la Peña y Ramirez, \\
                 Manuel Fernandez Soto.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Michoacán, \stopxcell
-    \startxcell Santos Degollado, \\ 
-                Sabás Iturbide, \\ 
+    \startxcell Santos Degollado, \\
+                Sabás Iturbide, \\
                 Francisco G. Anaya, \\
-                Ramon I. Alcaraz, \\ 
+                Ramon I. Alcaraz, \\
                 Francisco Diaz Barriga,\\
-                Luis Gutierrez Correa, \\ 
+                Luis Gutierrez Correa, \\
                 Mariano Ramirez, \\
                 Mateo Echaiz.- \stopxcell
 \stopxrow
@@ -606,23 +607,23 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Oaxaca, \stopxcell
-    \startxcell Mariano Zavala, \\ 
-                G. Larrazabal, \\ 
+    \startxcell Mariano Zavala, \\
+                G. Larrazabal, \\
                 Ignacio Mariscal, \\
-                Juan N. Cerqueda, \\ 
-                Félix Romero, \\ 
+                Juan N. Cerqueda, \\
+                Félix Romero, \\
                 Manuel E. Goytia.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Puebla, \stopxcell
-    \startxcell Miguel María Arrioja, \\ 
-                Fernando María Ortega, \\     
-                Guillermo Prieto, \\ 
-                J. Mariano Viadas, \\ 
-                Francisco Banuet, \\ 
-                Manuel M. Bargas, \\ 
-                Francisco Lazo Estrada, \\ 
-                Juan N. Ibarra, \\ 
+    \startxcell Miguel María Arrioja, \\
+                Fernando María Ortega, \\
+                Guillermo Prieto, \\
+                J. Mariano Viadas, \\
+                Francisco Banuet, \\
+                Manuel M. Bargas, \\
+                Francisco Lazo Estrada, \\
+                Juan N. Ibarra, \\
                 Juan N. de la Parra.- \stopxcell
 \stopxrow
 \startxrow
@@ -631,7 +632,7 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de San Luis Potosí, \stopxcell
-    \startxcell Francisco J. Villalobos, \\ 
+    \startxcell Francisco J. Villalobos, \\
                 Pablo Tellez.- \stopxcell
 \stopxrow
 \startxrow
@@ -657,15 +658,15 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \startxrow
     \startxcell Por el Estado de Veracruz, \stopxcell
     \startxcell José de Empáran, \\
-                José María Mata,\\ 
-                Rafael Gonzalez Paez, \\ 
+                José María Mata,\\
+                Rafael Gonzalez Paez, \\
                 Mariano Vega.- \stopxcell
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Yucatan, \stopxcell
-    \startxcell Benito Quijano, \\ 
-                Francisco Iniestra, \\ 
-                Pedro de Baranda,\\ 
+    \startxcell Benito Quijano, \\
+                Francisco Iniestra, \\
+                Pedro de Baranda,\\
                 Pedro Contreras Elizalde.- \stopxcell
 \stopxrow
 \startxrow
@@ -674,7 +675,7 @@ Dada en el salon de sesiones del congreso, en México, á cinco de Febrero de mi
 \stopxrow
 \startxrow
     \startxcell Por el Estado de Zacatecas, \stopxcell
-    \startxcell Miguel Auza, \\ 
+    \startxcell Miguel Auza, \\
                 Agustin López de Nava,\\
                 Basilio Perez Gallardo.- \stopxcell
 \stopxrow
